@@ -1,6 +1,7 @@
 from forex_python.converter import CurrencyRates, CurrencyCodes
 from forex_python.bitcoin import BtcConverter
 
+
 try:
     def main():
         currency_rates = CurrencyRates()
@@ -53,3 +54,4 @@ try:
         main()
 except Exception as e:
     print(f"Error: {e}")
+    print("Exiting Currency Converter. Goodbye!")

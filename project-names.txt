@@ -1,0 +1,8 @@
+calculator
+currecnyconverter
+password keeper
+stock tracker
+sentiment tool
+doc scanner
+crypto tracker
+muisc recomder
