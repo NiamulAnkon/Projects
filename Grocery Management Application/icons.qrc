@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Icon/icons8-history-90.png</file>
+    <file>Icon/icons8-add-shopping-cart-90.png</file>
+    <file>Icon/icons8-cheque-90.png</file>
+    <file>Icon/icons8-dashboard-96.png</file>
+    <file>Icon/icons8-pay-90.png</file>
+  </qresource>
+</RCC>
