@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="Icons">
+    <file>dashboard.png</file>
+    <file>menu.png</file>
+    <file>shipping.png</file>
+    <file>shopping-list.png</file>
+  </qresource>
+</RCC>

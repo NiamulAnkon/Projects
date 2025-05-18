@@ -1,0 +1,540 @@
+[
+    {
+        "id": 1,
+        "question": "When pushing a squad, do you prefer calling shots or following them?",
+        "type": "mcq",
+        "options": [
+            "Call shots ",
+            "Follow team ",
+            "Flank wide ",
+            "Push aggressively "
+        ]
+    },
+    {
+        "id": 2,
+        "question": "What\u2019s more important to you: positioning or fragging?",
+        "type": "mcq",
+        "options": [
+            "Positioning ",
+            "Fragging ",
+            "Both equally ",
+            "Situational "
+        ]
+    },
+    {
+        "id": 3,
+        "question": "How often do you watch zone and plan rotations?",
+        "type": "slider",
+        "min": 1,
+        "max": 10
+    },
+    {
+        "id": 4,
+        "question": "Do you call vehicle rotations or leave it to others?",
+        "type": "mcq",
+        "options": [
+            "I always call ",
+            "Sometimes ",
+            "Rarely ",
+            "I follow others "
+        ]
+    },
+    {
+        "id": 5,
+        "question": "If a teammate is knocked, do you revive instantly or clear threats first?",
+        "type": "mcq",
+        "options": [
+            "Clear threats first ",
+            "Revive instantly ",
+            "Call decision based on situation ",
+            "Try to bait enemy "
+        ]
+    },
+    {
+        "id": 6,
+        "question": "How often do you give real-time comms during fights?",
+        "type": "slider",
+        "min": 1,
+        "max": 10
+    },
+    {
+        "id": 7,
+        "question": "How often do you guide your team into the next zone?",
+        "type": "slider",
+        "min": 1,
+        "max": 10
+    },
+    {
+        "id": 8,
+        "question": "Do you analyze mistakes after a fight or forget it?",
+        "type": "mcq",
+        "options": [
+            "Always analyze ",
+            "Sometimes think over ",
+            "Forget and move on ",
+            "Only major fights "
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Are you more of a team decision-maker or executor?",
+        "type": "mcq",
+        "options": [
+            "Decision-maker ",
+            "Executor ",
+            "Silent executor ",
+            "Independent thinker "
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Do you often think in terms of area control or fight timing?",
+        "type": "mcq",
+        "options": [
+            "Area control ",
+            "Fight timing ",
+            "Both ",
+            "Pick off timings "
+        ]
+    },
+    {
+        "id": 11,
+        "question": "Placeholder question 11?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 12,
+        "question": "Placeholder question 12?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Placeholder question 13?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Placeholder question 14?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 15,
+        "question": "Placeholder question 15?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Placeholder question 16?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 17,
+        "question": "Placeholder question 17?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 18,
+        "question": "Placeholder question 18?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Placeholder question 19?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 20,
+        "question": "Placeholder question 20?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Placeholder question 21?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 22,
+        "question": "Placeholder question 22?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Placeholder question 23?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 24,
+        "question": "Placeholder question 24?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 25,
+        "question": "Placeholder question 25?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 26,
+        "question": "Placeholder question 26?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Placeholder question 27?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 28,
+        "question": "Placeholder question 28?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Placeholder question 29?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 30,
+        "question": "Placeholder question 30?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 31,
+        "question": "Placeholder question 31?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 32,
+        "question": "Placeholder question 32?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 33,
+        "question": "Placeholder question 33?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 34,
+        "question": "Placeholder question 34?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 35,
+        "question": "Placeholder question 35?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 36,
+        "question": "Placeholder question 36?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 37,
+        "question": "Placeholder question 37?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 38,
+        "question": "Placeholder question 38?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 39,
+        "question": "Placeholder question 39?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 40,
+        "question": "Placeholder question 40?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 41,
+        "question": "Placeholder question 41?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 42,
+        "question": "Placeholder question 42?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 43,
+        "question": "Placeholder question 43?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 44,
+        "question": "Placeholder question 44?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 45,
+        "question": "Placeholder question 45?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 46,
+        "question": "Placeholder question 46?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 47,
+        "question": "Placeholder question 47?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 48,
+        "question": "Placeholder question 48?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 49,
+        "question": "Placeholder question 49?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    },
+    {
+        "id": 50,
+        "question": "Placeholder question 50?",
+        "type": "mcq",
+        "options": [
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D"
+        ]
+    }
+]
