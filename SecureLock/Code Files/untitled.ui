@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(243, 244, 246);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="header">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>801</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Palatino Linotype</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(31, 41, 55);
+color: #FFFFFF;</string>
+    </property>
+    <property name="text">
+     <string>SecureLock</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Lock_file_btn">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>120</y>
+      <width>641</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+        background-color: #3B82F6;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    QPushButton:hover {
+        background-color: #2563EB;
+}</string>
+    </property>
+    <property name="text">
+     <string> Lock File</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Lock_fiolder_btn">
+    <property name="geometry">
+     <rect>
+      <x>66</x>
+      <y>260</y>
+      <width>641</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+        background-color: #3B82F6;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    QPushButton:hover {
+        background-color: #2563EB;
+}</string>
+    </property>
+    <property name="text">
+     <string>Lock Folder</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="unlock_folderorfile_btn">
+    <property name="geometry">
+     <rect>
+      <x>76</x>
+      <y>410</y>
+      <width>641</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+        background-color: #10B981;
+        color: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+    QPushButton:hover {
+        background-color: #059669;
+}</string>
+    </property>
+    <property name="text">
+     <string>Unlock File/Folder</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="themes">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>530</y>
+      <width>161</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>Default</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Shadow Night</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Crystal Sky</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Midnight Vault</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Mint Steel</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Desert Copper</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ocean Guard</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Neon Lock</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="theme_label">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>490</y>
+      <width>47</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Themes</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

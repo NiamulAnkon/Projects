@@ -1,5 +1,0 @@
-File locker system where user can lock and unlock files
-
-in this software the main purpose is when user want's to lock folder or file the first thing they had to do is
-select or locate the folder or file and then they have to setup a password to open the file so whenever user normally tries
-to open it it will say to put a password to unlock it or unlock the file or folder from the software.
