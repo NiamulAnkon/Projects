@@ -1,0 +1,142 @@
+[
+  {
+    "title": "Cyberpunk 2077",
+    "genre": ["RPG", "Open World"],
+    "platforms": ["Steam", "Epic"],
+    "price_type": "Paid",
+    "min_specs": {
+      "cpu": "i5-3570K",
+      "gpu": "GTX 780",
+      "ram_gb": 8
+    },
+    "description": "Futuristic RPG with deep storytelling and vast city exploration.",
+    "image": "cyberpunk.png",
+    "link": "https://store.steampowered.com/app/1091500"
+  },
+  {
+    "title": "Valorant",
+    "genre": ["Shooter", "Multiplayer"],
+    "platforms": ["Riot"],
+    "price_type": "Free",
+    "min_specs": {
+      "cpu": "i3-4150",
+      "gpu": "GT 730",
+      "ram_gb": 4
+    },
+    "description": "Competitive 5v5 tactical FPS with unique agents.",
+    "image": "valorant.png",
+    "link": "https://playvalorant.com/"
+  },
+  {
+    "title": "Stardew Valley",
+    "genre": ["Indie", "Simulation", "RPG"],
+    "platforms": ["Steam", "GOG"],
+    "price_type": "Paid",
+    "min_specs": {
+      "cpu": "2 GHz",
+      "gpu": "Integrated",
+      "ram_gb": 2
+    },
+    "description": "Charming farming simulator with deep relationship mechanics.",
+    "image": "stardew.png",
+    "link": "https://store.steampowered.com/app/413150"
+  },
+  {
+    "title": "Apex Legends",
+    "genre": ["Shooter", "Battle Royale"],
+    "platforms": ["Steam", "Origin"],
+    "price_type": "Free",
+    "min_specs": {
+      "cpu": "i3-6300",
+      "gpu": "GTX 640",
+      "ram_gb": 6
+    },
+    "description": "Fast-paced hero shooter battle royale with squads.",
+    "image": "apex.png",
+    "link": "https://www.ea.com/games/apex-legends"
+  },
+  {
+    "title": "Minecraft",
+    "genre": ["Sandbox", "Adventure"],
+    "platforms": ["Official Launcher"],
+    "price_type": "Paid",
+    "min_specs": {
+      "cpu": "i3",
+      "gpu": "Intel HD 4000",
+      "ram_gb": 4
+    },
+    "description": "Creative sandbox world where you build, mine, and explore.",
+    "image": "minecraft.png",
+    "link": "https://www.minecraft.net/"
+  },
+  {
+    "title": "CS:GO",
+    "genre": ["Shooter", "Multiplayer"],
+    "platforms": ["Steam"],
+    "price_type": "Free",
+    "min_specs": {
+      "cpu": "Intel Core 2 Duo E6600",
+      "gpu": "GT 730",
+      "ram_gb": 2
+    },
+    "description": "Classic competitive shooter experience.",
+    "image": "csgo.png",
+    "link": "https://store.steampowered.com/app/730"
+  },
+  {
+    "title": "Assassin's Creed Valhalla",
+    "genre": ["Action", "Adventure", "RPG"],
+    "platforms": ["Ubisoft", "Epic"],
+    "price_type": "Paid",
+    "min_specs": {
+      "cpu": "Ryzen 3 1200 / i5-4460",
+      "gpu": "GTX 960",
+      "ram_gb": 8
+    },
+    "description": "Viking-era epic with immersive combat and exploration.",
+    "image": "valhalla.png",
+    "link": "https://www.ubisoft.com/game/assassins-creed/valhalla"
+  },
+  {
+    "title": "Rocket League",
+    "genre": ["Sports", "Multiplayer", "Arcade"],
+    "platforms": ["Epic"],
+    "price_type": "Free",
+    "min_specs": {
+      "cpu": "2.5 GHz Dual core",
+      "gpu": "GTX 660",
+      "ram_gb": 4
+    },
+    "description": "Soccer meets rocket-powered cars.",
+    "image": "rocketleague.png",
+    "link": "https://www.rocketleague.com/"
+  },
+  {
+    "title": "Terraria",
+    "genre": ["Adventure", "Indie", "Survival"],
+    "platforms": ["Steam"],
+    "price_type": "Paid",
+    "min_specs": {
+      "cpu": "2 GHz",
+      "gpu": "Integrated",
+      "ram_gb": 2
+    },
+    "description": "Dig, fight, build and explore in a 2D world full of wonder.",
+    "image": "terraria.png",
+    "link": "https://store.steampowered.com/app/105600"
+  },
+  {
+    "title": "The Witcher 3: Wild Hunt",
+    "genre": ["RPG", "Open World"],
+    "platforms": ["Steam", "GOG", "Epic"],
+    "price_type": "Paid",
+    "min_specs": {
+      "cpu": "i5-2500K",
+      "gpu": "GTX 770",
+      "ram_gb": 6
+    },
+    "description": "Award-winning RPG adventure with deep storytelling.",
+    "image": "witcher3.png",
+    "link": "https://store.steampowered.com/app/292030"
+  }
+]
