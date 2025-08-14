@@ -1,0 +1,540 @@
+[
+    {
+        "id": 1,
+        "question": "When pushing a squad, do you prefer calling shots or following them?",
+        "type": "mcq",
+        "options": [
+            "Call shots ",
+            "Follow team ",
+            "Flank wide ",
+            "Push aggressively "
+        ]
+    },
+    {
+        "id": 2,
+        "question": "What\u2019s more important to you: positioning or fragging?",
+        "type": "mcq",
+        "options": [
+            "Positioning ",
+            "Fragging ",
+            "Both equally ",
+            "Situational "
+        ]
+    },
+    {
+        "id": 3,
+        "question": "How often do you watch zone and plan rotations?",
+        "type": "slider",
+        "min": 1,
+        "max": 10
+    },
+    {
+        "id": 4,
+        "question": "Do you call vehicle rotations or leave it to others?",
+        "type": "mcq",
+        "options": [
+            "I always call ",
+            "Sometimes ",
+            "Rarely ",
+            "I follow others "
+        ]
+    },
+    {
+        "id": 5,
+        "question": "If a teammate is knocked, do you revive instantly or clear threats first?",
+        "type": "mcq",
+        "options": [
+            "Clear threats first ",
+            "Revive instantly ",
+            "Call decision based on situation ",
+            "Try to bait enemy "
+        ]
+    },
+    {
+        "id": 6,
+        "question": "How often do you give real-time comms during fights?",
+        "type": "slider",
+        "min": 1,
+        "max": 10
+    },
+    {
+        "id": 7,
+        "question": "How often do you guide your team into the next zone?",
+        "type": "slider",
+        "min": 1,
+        "max": 10
+    },
+    {
+        "id": 8,
+        "question": "Do you analyze mistakes after a fight or forget it?",
+        "type": "mcq",
+        "options": [
+            "Always analyze ",
+            "Sometimes think over ",
+            "Forget and move on ",
+            "Only major fights "
+        ]
+    },
+    {
+        "id": 9,
+        "question": "Are you more of a team decision-maker or executor?",
+        "type": "mcq",
+        "options": [
+            "Decision-maker ",
+            "Executor ",
+            "Silent executor ",
+            "Independent thinker "
+        ]
+    },
+    {
+        "id": 10,
+        "question": "Do you often think in terms of area control or fight timing?",
+        "type": "mcq",
+        "options": [
+            "Area control ",
+            "Fight timing ",
+            "Both ",
+            "Pick off timings "
+        ]
+    },
+    {
+        "id": 11,
+        "question": "How confident are you while leading a team into hot drops?",
+        "type": "mcq",
+        "options": [
+            "Very confident",
+            "Confident with backup",
+            "Prefer safer drops",
+            "Avoid hot drops"
+        ]
+    },
+    {
+        "id": 12,
+        "question": "Do you keep track of enemy rotations during the mid-game?",
+        "type": "mcq",
+        "options": [
+            "Always",
+            "Sometimes",
+            "Rarely",
+            "Not at all"
+        ]
+    },
+    {
+        "id": 13,
+        "question": "Whats your focus in the final zones?",
+        "type": "mcq",
+        "options": [
+            "Zone center hold",
+            "Edge play with picks",
+            "Third-party fights",
+            "Avoid fights"
+        ]
+    },
+    {
+        "id": 14,
+        "question": "Do you communicate loot status and requirements early?",
+        "type": "mcq",
+        "options": [
+            "Always",
+            "Only when needed",
+            "Sometimes",
+            "Not really"
+        ]
+    },
+    {
+        "id": 15,
+        "question": "When your team splits, what role do you usually take?",
+        "type": "mcq",
+        "options": [
+            "Anchor",
+            "Flanker",
+            "Scout",
+            "Play solo aggressively"
+        ]
+    },
+    {
+        "id": 16,
+        "question": "Do you ping enemies and utilities during fights?",
+        "type": "mcq",
+        "options": [
+            "Consistently",
+            "Occasionally",
+            "Only when calm",
+            "Not at all"
+        ]
+    },
+    {
+        "id": 17,
+        "question": "How often do you help manage team resources (meds, ammo)?",
+        "type": "mcq",
+        "options": [
+            "Always share and call out",
+            "Only in emergencies",
+            "Rarely",
+            "Prefer individual survival"
+        ]
+    },
+    {
+        "id": 18,
+        "question": "What is your approach to 1v1 clutch scenarios?",
+        "type": "mcq",
+        "options": [
+            "Calm and strategic",
+            "Aggressive and fast",
+            "Try to reposition",
+            "Avoid clutches"
+        ]
+    },
+    {
+        "id": 19,
+        "question": "Do you study enemy patterns between matches?",
+        "type": "mcq",
+        "options": [
+            "Yes, thoroughly",
+            "Sometimes",
+            "Rarely",
+            "Not at all"
+        ]
+    },
+    {
+        "id": 20,
+        "question": "How do you react when a plan fails mid-game?",
+        "type": "mcq",
+        "options": [
+            "Adapt immediately",
+            "Wait for IGL",
+            "Panic slightly",
+            "No plan, just react"
+        ]
+    },
+    {
+        "id": 21,
+        "question": "Do you watch scrims or pro tournaments to learn strategies?",
+        "type": "mcq",
+        "options": [
+            "Very often",
+            "Sometimes",
+            "Rarely",
+            "Never"
+        ]
+    },
+    {
+        "id": 22,
+        "question": "In a 4v4 situation, what do you prioritize?",
+        "type": "mcq",
+        "options": [
+            "Positioning",
+            "Utility usage",
+            "First knock",
+            "Quick push"
+        ]
+    },
+    {
+        "id": 23,
+        "question": "Do you guide or lead when the team is under pressure?",
+        "type": "mcq",
+        "options": [
+            "Yes, I take control",
+            "Support the IGL",
+            "Stay silent",
+            "Play solo"
+        ]
+    },
+    {
+        "id": 24,
+        "question": "What is your role in utility management (smokes, nades)?",
+        "type": "mcq",
+        "options": [
+            "Lead utilities",
+            "Assist with smokes",
+            "Save for clutch",
+            "Use sparingly"
+        ]
+    },
+    {
+        "id": 25,
+        "question": "How do you handle pressure in end zones?",
+        "type": "mcq",
+        "options": [
+            "Stay calm and focused",
+            "Overthink and panic",
+            "Trust teammates",
+            "Go with instincts"
+        ]
+    },
+    {
+        "id": 26,
+        "question": "Do you prefer engaging early or playing slow in ranked matches?",
+        "type": "mcq",
+        "options": [
+            "Early fights",
+            "Mid-game pressure",
+            "End-game survival",
+            "Adaptive"
+        ]
+    },
+    {
+        "id": 27,
+        "question": "Are you more comfortable with TPP or FPP?",
+        "type": "mcq",
+        "options": [
+            "TPP only",
+            "FPP only",
+            "Both equally",
+            "Depends on team"
+        ]
+    },
+    {
+        "id": 28,
+        "question": "What is your first instinct after hearing a gunshot nearby?",
+        "type": "mcq",
+        "options": [
+            "Scout and flank",
+            "Push immediately",
+            "Hold position",
+            "Rotate away"
+        ]
+    },
+    {
+        "id": 29,
+        "question": "Do you pre-plan rotations with the team?",
+        "type": "mcq",
+        "options": [
+            "Yes, always",
+            "Sometimes",
+            "Rarely",
+            "Let others decide"
+        ]
+    },
+    {
+        "id": 30,
+        "question": "How often do you play custom/scrims over classics?",
+        "type": "mcq",
+        "options": [
+            "Mostly customs",
+            "Both equally",
+            "Rarely customs",
+            "Only classics"
+        ]
+    },
+    {
+        "id": 31,
+        "question": "How do you react when a teammate gets knocked in an open area?",
+        "type": "mcq",
+        "options": [
+            "Smoke and revive immediately",
+            "Cover and bait",
+            "Push enemies to create pressure",
+            "Ignore and play for survival"
+        ]
+    },
+    {
+        "id": 32,
+        "question": "Do you prefer to enter the zone early or late?",
+        "type": "mcq",
+        "options": [
+            "Early entry and hold",
+            "Late entry with kills",
+            "Mid-game rotate with team",
+            "Depends on circle"
+        ]
+    },
+    {
+        "id": 33,
+        "question": "What's your favorite utility in fights?",
+        "type": "mcq",
+        "options": [
+            "Frag grenade",
+            "Smoke grenade",
+            "Molotov",
+            "Stun grenade"
+        ]
+    },
+    {
+        "id": 34,
+        "question": "How do you behave when you're last alive in a 1v3+ situation?",
+        "type": "mcq",
+        "options": [
+            "Try to clutch",
+            "Hide and survive",
+            "Go for placement points",
+            "Play randomly"
+        ]
+    },
+    {
+        "id": 35,
+        "question": "Do you often scout compounds before rotations?",
+        "type": "mcq",
+        "options": [
+            "Yes, always",
+            "Only on demand",
+            "Sometimes",
+            "Not at all"
+        ]
+    },
+    {
+        "id": 36,
+        "question": "What’s your decision-making style in-game?",
+        "type": "mcq",
+        "options": [
+            "Analytical and planned",
+            "Instinctive and fast",
+            "Reactive based on others",
+            "Go with the flow"
+        ]
+    },
+    {
+        "id": 37,
+        "question": "How do you practice aim and reflexes?",
+        "type": "mcq",
+        "options": [
+            "TDMs and Arena",
+            "Aim trainers and drills",
+            "Classic fights only",
+            "Rarely practice aim"
+        ]
+    },
+    {
+        "id": 38,
+        "question": "What role do you feel most natural playing?",
+        "type": "mcq",
+        "options": [
+            "IGL/Leader",
+            "Support",
+            "Entry Fragger",
+            "Sniper"
+        ]
+    },
+    {
+        "id": 39,
+        "question": "When holding compounds, how do you position yourself?",
+        "type": "mcq",
+        "options": [
+            "High-ground overview",
+            "Close to entrances",
+            "Anchor inside",
+            "Roam and scout"
+        ]
+    },
+    {
+        "id": 40,
+        "question": "How often do you take 1v2+ fights willingly?",
+        "type": "mcq",
+        "options": [
+            "Very often",
+            "Sometimes",
+            "Only when confident",
+            "Never, prefer backup"
+        ]
+    },
+    {
+        "id": 41,
+        "question": "How do you handle loot distribution in early game?",
+        "type": "mcq",
+        "options": [
+            "Share equally",
+            "Prioritize fraggers",
+            "Grab best for self",
+            "Let others loot first"
+        ]
+    },
+    {
+        "id": 42,
+        "question": "In early game fights, what’s your preferred role?",
+        "type": "mcq",
+        "options": [
+            "Entry and first knock",
+            "Cover fire and backup",
+            "Utility control",
+            "Flanker"
+        ]
+    },
+    {
+        "id": 43,
+        "question": "What do you do after your team gets third-partied?",
+        "type": "mcq",
+        "options": [
+            "Fall back and reset",
+            "Take one team out",
+            "Go aggressive on both",
+            "Wait and defend"
+        ]
+    },
+    {
+        "id": 44,
+        "question": "How would teammates describe your in-game communication?",
+        "type": "mcq",
+        "options": [
+            "Leader and clear",
+            "Short and useful",
+            "Casual and joking",
+            "Quiet or chaotic"
+        ]
+    },
+    {
+        "id": 45,
+        "question": "Which vehicle do you prefer for team rotation?",
+        "type": "mcq",
+        "options": [
+            "Dacia/UAZ (balanced)",
+            "Buggy (speed)",
+            "Bike (solo scout)",
+            "Whatever’s available"
+        ]
+    },
+    {
+        "id": 46,
+        "question": "Do you adapt your gameplay based on enemy teams' behavior?",
+        "type": "mcq",
+        "options": [
+            "Yes, actively",
+            "Sometimes",
+            "Only if I notice patterns",
+            "I stick to my own plan"
+        ]
+    },
+    {
+        "id": 47,
+        "question": "How do you handle a teammate’s call that you disagree with?",
+        "type": "mcq",
+        "options": [
+            "Discuss and suggest alternative",
+            "Follow and adjust later",
+            "Ignore and do my own thing",
+            "Let majority decide"
+        ]
+    },
+    {
+        "id": 48,
+        "question": "How often do you review or analyze your own gameplay?",
+        "type": "mcq",
+        "options": [
+            "After every game",
+            "After bad games",
+            "Once in a while",
+            "Never"
+        ]
+    },
+    {
+        "id": 49,
+        "question": "Do you rely more on gun skill or game sense?",
+        "type": "mcq",
+        "options": [
+            "Gun skill mostly",
+            "Game sense mostly",
+            "Balanced",
+            "Depends on situation"
+        ]
+    },
+    {
+        "id": 50,
+        "question": "What motivates you most in competitive games?",
+        "type": "mcq",
+        "options": [
+            "Winning as a team",
+            "High kill games",
+            "Outsmarting others",
+            "Being recognized"
+        ]
+    }
+]

@@ -1,0 +1,1 @@
+API_KEY = "AIzaSyDZOe3eCCtuiqME0Cdl6i0aF2PRWQOW7QY"  # Your Google API key
