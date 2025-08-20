@@ -4,6 +4,8 @@ import json
 from PyQt5.QtWidgets import QApplication, QDialog, QMainWindow
 from notice_window import Ui_Disclaimer
 from main_window import Ui_MainWindow
+from setting_window import SettingsWindow
+from themes import LIGHT_THEME, DARK_THEME
 
 SETTINGS_FILE = "settings.json"
 
@@ -17,13 +19,22 @@ def save_settings(data):
     with open(SETTINGS_FILE, "w") as f:
         json.dump(data, f)
 
-# Wrapper for your main window
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.setWindowTitle("Mental Help AI")
 
-# Wrapper for your disclaimer window as a QDialog
+        self.settings = load_settings()
+        self.apply_theme(self.settings.get("theme", "Light"))
+
+    def apply_theme(self, theme):
+        if theme == "Dark":
+            self.setStyleSheet(DARK_THEME)
+        else:
+            self.setStyleSheet(LIGHT_THEME)
+    
+
 class DisclaimerDialog(QDialog, Ui_Disclaimer):
     def __init__(self):
         super().__init__()
@@ -31,6 +42,7 @@ class DisclaimerDialog(QDialog, Ui_Disclaimer):
         self.setWindowTitle("Disclaimer")
         self.agree_btn.clicked.connect(self.accept)
         self.ext_btn.clicked.connect(self.reject)
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

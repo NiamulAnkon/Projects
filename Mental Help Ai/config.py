@@ -1,1 +1,1 @@
-API_KEY = "api key"  # Your Google API key
+API_KEY = "api key"  # can't share the key publicly
