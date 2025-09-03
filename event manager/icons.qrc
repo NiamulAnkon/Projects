@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>settings.png</file>
+    <file>plus.png</file>
+  </qresource>
+</RCC>
