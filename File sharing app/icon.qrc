@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/icons8-folder-100.png</file>
+    <file>icons/icons8-plus-100.png</file>
+    <file>icons/icons8-setting-100.png</file>
+    <file>icons/icons8-share-60.png</file>
+    <file>icons/icons8-trash-128.png</file>
+    <file>icons/icons8-upload-100.png</file>
+    <file>icons/icons8-user-100.png</file>
+  </qresource>
+</RCC>
