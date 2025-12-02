@@ -1,0 +1,27 @@
+										SCRIPT
+
+hi there guys it's been a while since I uploaded any single video even an project video
+-------------------------------------------------------------------------------------------------
+so I thought why not let's make a video of a fun side project I though of creating and at the last of the video I will show you a 5 to 10 min of gameplay of my own game 
+-----------------------------------------------------------------------------------
+so stay tuned for that and so mainly the way I got the idea of creating this game was I was chilling in my workstation and suddenly I though let's create a game like this
+--------------------------------------------------------------------------
+and so I started creating the games logic structure and ui mainly rough sketch and stuff and then the first thing I thought was the tech stack well as you know I have a
+-------------------------------------------------------
+previous experience on godot so you will think that I will use godot to create this game now also if I have used godot then it can become a really good game but I thought to
+----------------------------------------------------------------
+create the game using pygame since I have no experience creating game in pygame before so it will be fun
+---------------------------------------------------
+well the first thing I did was learning the pygame frame work from freecodecamporg tutorials then after learning the basics and stuff
+------------------------------------------------------------------------------
+I started creating the main menu first using the background I created a layouts of buttons after I got the perfect button layout I jumped straight into canva 
+---------------------------------------------------------------------------------------------
+to design the buttons after designing them I added them in the window and after that I started creating the logics for each buttons
+---------------------------------------------------------------------
+and for the gameplay I used a simple logics it will be a click to earn money option type of game it's kinda boring for some people but I like to paly these kind of games sometimes 
+-----------------------------------------------------------------------
+now the thing is now The thing is to create the game I used a simple logic which is there will be a button in the middle of the box where when you click it you will earn money but when you are not clicking the button you're not getting the money an from the upgrade shop you will be able to buy upgrades which will help you to increase part app earning which is gonna be super sufficient if you think about it properly then we have shop where we have some extra things like decorations machines etc and that was pretty much it I thought to be honest and also I have added a branch system so that your money will increase according to the branches you have an this is like pretty much it has extra purposes and stuff like that to be honest a simple and an normal game
+-------------------------------------------------------------------------
+
+well that was actually pretty much it for this video oh yea about the gameplay let's start the gameplay section and wrap it up 
+----------------------------------------------------

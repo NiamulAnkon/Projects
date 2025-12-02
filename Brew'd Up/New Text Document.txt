@@ -1,0 +1,1 @@
+pyinstaller --onefile --windowed --icon=logo.ico main.py --add-data "Graphics;Graphics" --add-data "Musics;Musics" --add-data "main_gameplay.py;." --add-data "menu.py;."
