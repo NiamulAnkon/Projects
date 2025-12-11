@@ -1,11 +1,17 @@
+import auth_db
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtCore import pyqtSignal
+from main_window import Ui_MainWindow
 
 class Ui_AuthWindow(object):
+    login_username = pyqtSignal(str)
     def setupUi(self, AuthWindow):
         AuthWindow.setObjectName("AuthWindow")
         AuthWindow.setFixedSize(400, 500)
         AuthWindow.setStyleSheet("background-color: rgb(30, 30, 47);")
+
+        self.AuthWindow = AuthWindow  # Store reference for QMessageBox parent
 
         # Central widget
         self.centralwidget = QtWidgets.QWidget(AuthWindow)
@@ -32,10 +38,10 @@ class Ui_AuthWindow(object):
         self.login_layout = QtWidgets.QVBoxLayout(self.login_page)
         self.login_layout.setSpacing(15)
 
-        self.login_username = self.create_icon_input("👤", "Username")
+        self.login_username, self.login_username_edit = self.create_icon_input("👤", "Username")
         self.login_layout.addWidget(self.login_username)
 
-        self.login_password = self.create_icon_input("🔒", "Password", password=True)
+        self.login_password, self.login_password_edit = self.create_icon_input("🔒", "Password", password=True)
         self.login_layout.addWidget(self.login_password)
 
         self.login_btn = self.create_button("Login")
@@ -52,16 +58,16 @@ class Ui_AuthWindow(object):
         self.register_layout = QtWidgets.QVBoxLayout(self.register_page)
         self.register_layout.setSpacing(15)
 
-        self.reg_username = self.create_icon_input("👤", "Username")
+        self.reg_username, self.reg_username_edit = self.create_icon_input("👤", "Username")
         self.register_layout.addWidget(self.reg_username)
 
-        self.reg_email = self.create_icon_input("✉️", "Email")
+        self.reg_email, self.reg_email_edit = self.create_icon_input("✉️", "Email")
         self.register_layout.addWidget(self.reg_email)
 
-        self.reg_password = self.create_icon_input("🔒", "Password", password=True)
+        self.reg_password, self.reg_password_edit = self.create_icon_input("🔒", "Password", password=True)
         self.register_layout.addWidget(self.reg_password)
 
-        self.reg_confirm = self.create_icon_input("🔒", "Confirm Password", password=True)
+        self.reg_confirm, self.reg_confirm_edit = self.create_icon_input("🔒", "Confirm Password", password=True)
         self.register_layout.addWidget(self.reg_confirm)
 
         self.register_btn = self.create_button("Register")
@@ -78,6 +84,17 @@ class Ui_AuthWindow(object):
         # Switch signals
         self.login_toggle.linkActivated.connect(lambda: self.stack.setCurrentWidget(self.register_page))
         self.register_toggle.linkActivated.connect(lambda: self.stack.setCurrentWidget(self.login_page))
+
+        self.register_btn.clicked.connect(lambda: self.register_user(
+            self.reg_username_edit.text(),
+            self.reg_email_edit.text(),
+            self.reg_password_edit.text(),
+            self.reg_confirm_edit.text()
+        ))
+        self.login_btn.clicked.connect(lambda: self.login_user(
+            self.login_username_edit.text(),
+            self.login_password_edit.text()
+        ))
 
         self.retranslateUi(AuthWindow)
         QtCore.QMetaObject.connectSlotsByName(AuthWindow)
@@ -110,7 +127,7 @@ class Ui_AuthWindow(object):
             }
         """)
         layout.addWidget(line_edit)
-        return container
+        return container, line_edit
 
     def create_button(self, text):
         btn = QtWidgets.QPushButton(text)
@@ -137,12 +154,49 @@ class Ui_AuthWindow(object):
         label.setStyleSheet("color: white;")
         label.setOpenExternalLinks(False)
 
+    def register_user(self, username, email, password, confirm):
+        if not username or not email or not password or not confirm:
+            QMessageBox.warning(self.AuthWindow, "Input Error", "All fields are required.")
+            return
+
+        if "@" not in email or "." not in email:
+            QMessageBox.warning(self.AuthWindow, "Input Error", "Invalid email format.")
+            return
+
+        if len(password) < 6:
+            QMessageBox.warning(self.AuthWindow, "Input Error", "Password must be at least 6 characters.")
+            return
+
+        if password != confirm:
+            QMessageBox.warning(self.AuthWindow, "Input Error", "Passwords do not match.")
+            return
+
+        success, message = auth_db.register_user(username, email, password)
+
+        if not success:
+            QMessageBox.warning(self.AuthWindow, "Registration Failed", message)
+        else:
+            QMessageBox.information(self.AuthWindow, "Success", message)
+            self.main_window = QtWidgets.QMainWindow()
+
+    def login_user(self, username, password):
+        if not username or not password:
+            QMessageBox.warning(self.AuthWindow, "Input Error", "All fields are required.")
+            return
+
+        success, message, user_data = auth_db.login_user(username, password)
+
+        if not success:
+            QMessageBox.warning(self.AuthWindow, "Login Failed", message)
+        else:
+            QMessageBox.information(self.AuthWindow, "Success", message)
+
     def retranslateUi(self, AuthWindow):
         AuthWindow.setWindowTitle("NebulaShare - Authentication")
 
-
 if __name__ == "__main__":
     import sys
+    auth_db.init_db()
     app = QtWidgets.QApplication(sys.argv)
     AuthWindow = QtWidgets.QMainWindow()
     ui = Ui_AuthWindow()
