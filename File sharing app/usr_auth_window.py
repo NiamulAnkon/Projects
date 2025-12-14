@@ -154,42 +154,50 @@ class Ui_AuthWindow(object):
         label.setStyleSheet("color: white;")
         label.setOpenExternalLinks(False)
 
+    def _show_message(self, parent, title, text, icon=QMessageBox.Warning):
+        dlg = QMessageBox(parent)
+        dlg.setWindowTitle(title)
+        dlg.setText(text)
+        dlg.setIcon(icon)
+        dlg.setStyleSheet("QMessageBox{background-color: rgb(23, 28, 45);} QMessageBox QLabel{color: white;} QMessageBox QPushButton{color: white;}")
+        dlg.exec_()
+
     def register_user(self, username, email, password, confirm):
         if not username or not email or not password or not confirm:
-            QMessageBox.warning(self.AuthWindow, "Input Error", "All fields are required.")
+            self._show_message(self.AuthWindow, "Input Error", "All fields are required.", QMessageBox.Warning)
             return
 
         if "@" not in email or "." not in email:
-            QMessageBox.warning(self.AuthWindow, "Input Error", "Invalid email format.")
+            self._show_message(self.AuthWindow, "Input Error", "Invalid email format.", QMessageBox.Warning)
             return
 
         if len(password) < 6:
-            QMessageBox.warning(self.AuthWindow, "Input Error", "Password must be at least 6 characters.")
+            self._show_message(self.AuthWindow, "Input Error", "Password must be at least 6 characters.", QMessageBox.Warning)
             return
 
         if password != confirm:
-            QMessageBox.warning(self.AuthWindow, "Input Error", "Passwords do not match.")
+            self._show_message(self.AuthWindow, "Input Error", "Passwords do not match.", QMessageBox.Warning)
             return
 
         success, message = auth_db.register_user(username, email, password)
 
         if not success:
-            QMessageBox.warning(self.AuthWindow, "Registration Failed", message)
+            self._show_message(self.AuthWindow, "Registration Failed", message, QMessageBox.Warning)
         else:
-            QMessageBox.information(self.AuthWindow, "Success", message)
+            self._show_message(self.AuthWindow, "Success", message, QMessageBox.Information)
             self.main_window = QtWidgets.QMainWindow()
 
     def login_user(self, username, password):
         if not username or not password:
-            QMessageBox.warning(self.AuthWindow, "Input Error", "All fields are required.")
+            self._show_message(self.AuthWindow, "Input Error", "All fields are required.", QMessageBox.Warning)
             return
 
         success, message, user_data = auth_db.login_user(username, password)
 
         if not success:
-            QMessageBox.warning(self.AuthWindow, "Login Failed", message)
+            self._show_message(self.AuthWindow, "Login Failed", message, QMessageBox.Warning)
         else:
-            QMessageBox.information(self.AuthWindow, "Success", message)
+            self._show_message(self.AuthWindow, "Success", message, QMessageBox.Information)
 
     def retranslateUi(self, AuthWindow):
         AuthWindow.setWindowTitle("NebulaShare - Authentication")

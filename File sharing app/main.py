@@ -2,10 +2,12 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import pyqtSignal
 import sys
 import auth_db
+import file_db
 from usr_auth_window import Ui_AuthWindow
 from main_window import Ui_MainWindow
 
 auth_db.init_db()
+file_db.init_db()
 
 class AuthWindow(QtWidgets.QMainWindow, Ui_AuthWindow):
     login_success = pyqtSignal(str)  # emits the username
@@ -13,6 +15,14 @@ class AuthWindow(QtWidgets.QMainWindow, Ui_AuthWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+
+    def _show_message(self, parent, title, text, icon=QtWidgets.QMessageBox.Warning):
+        dlg = QtWidgets.QMessageBox(parent)
+        dlg.setWindowTitle(title)
+        dlg.setText(text)
+        dlg.setIcon(icon)
+        dlg.setStyleSheet("QMessageBox{background-color: rgb(23, 28, 45);} QMessageBox QLabel{color: white;} QMessageBox QPushButton{color: white;}")
+        dlg.exec_()
 
     def register_user(self, username, email, password, confirm):
         # normalize inputs to avoid accidental whitespace mismatches
@@ -22,27 +32,27 @@ class AuthWindow(QtWidgets.QMainWindow, Ui_AuthWindow):
         confirm = confirm or ""
 
         if not username or not email or not password or not confirm:
-            QtWidgets.QMessageBox.warning(self, "Input Error", "All fields are required.")
+            self._show_message(self, "Input Error", "All fields are required.", QtWidgets.QMessageBox.Warning)
             return
 
         if "@" not in email or "." not in email:
-            QtWidgets.QMessageBox.warning(self, "Input Error", "Invalid email format.")
+            self._show_message(self, "Input Error", "Invalid email format.", QtWidgets.QMessageBox.Warning)
             return
 
         if len(password) < 6:
-            QtWidgets.QMessageBox.warning(self, "Input Error", "Password must be at least 6 characters.")
+            self._show_message(self, "Input Error", "Password must be at least 6 characters.", QtWidgets.QMessageBox.Warning)
             return
 
         if password != confirm:
-            QtWidgets.QMessageBox.warning(self, "Input Error", "Passwords do not match.")
+            self._show_message(self, "Input Error", "Passwords do not match.", QtWidgets.QMessageBox.Warning)
             return
 
         success, message = auth_db.register_user(username, email, password)
 
         if not success:
-            QtWidgets.QMessageBox.warning(self, "Registration Failed", message)
+            self._show_message(self, "Registration Failed", message, QtWidgets.QMessageBox.Warning)
         else:
-            QtWidgets.QMessageBox.information(self, "Success", message)
+            self._show_message(self, "Success", message, QtWidgets.QMessageBox.Information)
             # Emit the signal and let the connected slot open the main window
             self.login_success.emit(username)
 
@@ -52,15 +62,15 @@ class AuthWindow(QtWidgets.QMainWindow, Ui_AuthWindow):
         password = password or ""
 
         if not username or not password:
-            QtWidgets.QMessageBox.warning(self, "Input Error", "All fields are required.")
+            self._show_message(self, "Input Error", "All fields are required.", QtWidgets.QMessageBox.Warning)
             return
 
         success, message, user_data = auth_db.login_user(username, password)
 
         if not success:
-            QtWidgets.QMessageBox.warning(self, "Login Failed", message)
+            self._show_message(self, "Login Failed", message, QtWidgets.QMessageBox.Warning)
         else:
-            QtWidgets.QMessageBox.information(self, "Success", message)
+            self._show_message(self, "Success", message, QtWidgets.QMessageBox.Information)
             # Emit the signal and let the connected slot open the main window
             self.login_success.emit(username)
 
