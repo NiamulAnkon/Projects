@@ -103,3 +103,23 @@ def delete_share_by_id(share_id: int, db_name: str = DB_NAME):
     changes = conn.total_changes
     conn.close()
     return changes
+
+
+def delete_files_not_owned(owner_username: str, db_name: str = DB_NAME):
+    conn = sqlite3.connect(db_name)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM files WHERE owner_username != ?", (owner_username,))
+    conn.commit()
+    changes = conn.total_changes
+    conn.close()
+    return changes
+
+
+def delete_shares_not_owned(owner_username: str, db_name: str = DB_NAME):
+    conn = sqlite3.connect(db_name)
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM shares WHERE owner_username != ?", (owner_username,))
+    conn.commit()
+    changes = conn.total_changes
+    conn.close()
+    return changes

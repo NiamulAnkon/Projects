@@ -177,6 +177,7 @@ class Ui_MainWindow(object):
         self.settings_btn.setIcon(QtGui.QIcon(":/icons/icons/icons8-setting-100.png"))
         self.settings_btn.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.sidebar_layout.addWidget(self.settings_btn)
+        self.settings_btn.clicked.connect(self.open_settings_dialog)
 
         self.sidebar_layout.addStretch()
         self.content_layout.addWidget(self.side_bar_frame, 1)
@@ -752,6 +753,120 @@ class Ui_MainWindow(object):
         if dlg.exec_() != QtWidgets.QDialog.Accepted:
             return []
         return dlg.selectedFiles()
+
+    # ----------------------- SETTINGS DIALOG -----------------------
+    def _settings_path(self):
+        return Path(__file__).parent.joinpath('settings.json')
+
+    def _load_settings(self):
+        p = self._settings_path()
+        try:
+            import json
+            if p.exists():
+                return json.loads(p.read_text())
+        except Exception:
+            pass
+        return {'theme': 'dark'}
+
+    def _save_settings(self, settings: dict):
+        p = self._settings_path()
+        try:
+            import json
+            p.write_text(json.dumps(settings))
+        except Exception:
+            pass
+
+    def apply_theme(self, theme: str):
+        app = QtWidgets.QApplication.instance()
+        if not app:
+            return
+        if theme.lower().startswith('light'):
+            # simple light theme for dialogs
+            app.setStyleSheet("QDialog, QMessageBox, QInputDialog, QFileDialog { color: black; background-color: white; }")
+        else:
+            app.setStyleSheet("QDialog, QMessageBox, QInputDialog, QFileDialog { color: white; }")
+        self._save_settings({'theme': theme})
+
+    def open_settings_dialog(self):
+        parent = getattr(self, 'MainWindow', None)
+        dlg = QtWidgets.QDialog(parent)
+        dlg.setWindowTitle('Settings')
+        dlg.setModal(True)
+        dlg.setMinimumSize(420, 220)
+        dlg.setStyleSheet('background-color: rgb(30,30,47); color: white;')
+
+        layout = QtWidgets.QVBoxLayout(dlg)
+
+        # Theme selection
+        hl = QtWidgets.QHBoxLayout()
+        hl.addWidget(QtWidgets.QLabel('Theme:'))
+        cmb = QtWidgets.QComboBox()
+        cmb.addItems(['Dark (default)', 'Light'])
+        settings = self._load_settings()
+        if settings.get('theme', 'dark').lower().startswith('light'):
+            cmb.setCurrentIndex(1)
+        else:
+            cmb.setCurrentIndex(0)
+        hl.addWidget(cmb)
+        layout.addLayout(hl)
+
+        # Buttons
+        btn_layout = QtWidgets.QHBoxLayout()
+        apply_btn = QtWidgets.QPushButton('Apply')
+        reset_btn = QtWidgets.QPushButton('Reset Everything')
+        reset_btn.setStyleSheet('background-color: rgb(200,60,60); color: white;')
+        close_btn = QtWidgets.QPushButton('Close')
+        btn_layout.addWidget(apply_btn)
+        btn_layout.addWidget(reset_btn)
+        btn_layout.addStretch()
+        btn_layout.addWidget(close_btn)
+        layout.addLayout(btn_layout)
+
+        def on_apply():
+            theme = cmb.currentText()
+            self.apply_theme(theme)
+            self._show_message(dlg, 'Settings', f'Applied theme: {theme}', QtWidgets.QMessageBox.Information)
+
+        def on_reset():
+            # confirm
+            ans = self._ask_question(dlg, 'Confirm Reset', 'This will remove all uploaded files and shares from other users. This cannot be undone. Continue?')
+            if ans != QtWidgets.QMessageBox.Yes:
+                return
+            try:
+                # remove storage folders for other users
+                base = Path(__file__).parent.joinpath('storage/users')
+                if base.exists():
+                    for child in base.iterdir():
+                        if not child.is_dir():
+                            continue
+                        if child.name == self.username:
+                            continue
+                        try:
+                            shutil.rmtree(child)
+                        except Exception:
+                            pass
+
+                # remove DB entries for files not owned by current user
+                try:
+                    file_db.delete_files_not_owned(self.username)
+                except Exception:
+                    pass
+                try:
+                    file_db.delete_shares_not_owned(self.username)
+                except Exception:
+                    pass
+
+                self._show_message(dlg, 'Reset', 'Reset completed successfully.', QtWidgets.QMessageBox.Information)
+                # refresh file list in main UI
+                self.refresh_file_list()
+            except Exception as e:
+                self._show_message(dlg, 'Reset Failed', f'Could not complete reset: {e}', QtWidgets.QMessageBox.Critical)
+
+        apply_btn.clicked.connect(on_apply)
+        reset_btn.clicked.connect(on_reset)
+        close_btn.clicked.connect(dlg.accept)
+
+        dlg.exec_()
 
 
 if __name__ == "__main__":
